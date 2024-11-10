@@ -115,6 +115,10 @@ document.getElementById("mul").onclick=function(){
 document.getElementById("div").onclick=function(){
     num1=parseFloat(document.getElementById("num1").value) ;
     num2=parseFloat(document.getElementById("num2").value) ;
+    if (num2 === 0) {
+        document.getElementById("result").textContent=`Number cannot be divided by 0`;
+        return;
+    }
     document.getElementById("result").textContent=`${num1/num2}`;   
 
 }
